@@ -1,16 +1,32 @@
 //Selectors
+
+//mode change
+const checkbox = document.querySelector('.checkbox');
+//todos
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 const filterOption = document.querySelector('.filter-todo');
 
 //Event Listeners
+
+//mode change
+checkbox.addEventListener('change', () => {
+    //change mode for website
+    document.body.classList.toggle('dark');
+});
+
+//todos
 document.addEventListener('DOMContentLoaded', getTodos)
 todoButton.addEventListener('click', addTodo);
 todoList.addEventListener('click', deleteCheck);
 filterOption.addEventListener('click', filterTodo);
 
 //Functions
+
+//mode change
+
+//todos
 function addTodo(event) {
     event.preventDefault();
     //Todo div
